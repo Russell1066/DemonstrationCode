@@ -52,6 +52,7 @@ namespace DemonstrationCode
 
                 bool taken = false;
                 try {
+                    Spinner.Enter(ref taken);
                     List<T> temp = ProduceArray;
                     ProduceArray = ConsumeArray;
                     ConsumeArray = temp;
