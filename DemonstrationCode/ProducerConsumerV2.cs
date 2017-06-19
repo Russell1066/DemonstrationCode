@@ -28,7 +28,7 @@ namespace DemonstrationCode
             try {
                 Spinner.Enter(ref taken);
                 ProduceArray.Add(item);
-            } catch {
+            } finally {
                 if(taken) {
                     Spinner.Exit();
                 }
@@ -56,7 +56,7 @@ namespace DemonstrationCode
                     List<T> temp = ProduceArray;
                     ProduceArray = ConsumeArray;
                     ConsumeArray = temp;
-                } catch {
+                } finally {
                     if(taken) {
                         Spinner.Exit();
                     }
